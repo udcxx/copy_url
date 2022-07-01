@@ -1,0 +1,22 @@
+{
+    "name": "Copy URL",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "description": "This is a Chrome Extension that copies URL and Title of a web page.",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "scripting",
+        "clipboardWrite"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [{
+        "matches": ["https://*/*"],
+        "js": ["script.js"]
+    }]
+}
